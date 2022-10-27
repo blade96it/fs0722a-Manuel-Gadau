@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 50px;
     padding-right: 50px;
 }
+.padding-top-grande {
+    padding-top: 70px;
+}
 /*Stile header*/
 header {
     background: black;
@@ -27,18 +30,18 @@ header {
 /*Main*/
 
 /*Stile section 1*/
-#partiamo {
+#sezione1 {
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
 }
-#partiamo h1 {
+#sezione1 h1 {
     font-size: 2.5rem;
-    padding-top: 70px;
+    
     line-height: 1.0;
 }
-#partiamo p {
+#sezione1 p {
     padding-top: 20px;
 
 }
@@ -55,5 +58,19 @@ header {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-
+/*Stile section 2*/
+#sezione2 h3{
+    font-size: 1.4rem;
+}
+.padding-top-p{
+    padding-top: 14px;
+}
+.padding-top-h{
+    padding-top: 30px;
+}
+#notebook{
+    width: 300px;
+    border-radius: 350px;
+    padding-top: 30px;
+}
 
