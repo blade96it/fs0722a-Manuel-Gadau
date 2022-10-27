@@ -1,22 +1,59 @@
 /*Impostazioni generali*/
 body {
     color:#393d41;
-    font-weight: 1.2rem;
+    font-size: 1.2rem;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.65;
+    text-align: center;
 }
 h1, h2, h3, h4, h5, h6 {
     color:#25a2c3;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.5;
 }
+.padding-lati {
+    padding-left: 50px;
+    padding-right: 50px;
+}
 /*Stile header*/
 header {
     background: black;
-    text-align: center;
 }
 #logo-header {
     width: 160px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
+/*Main*/
+
+/*Stile section 1*/
+#partiamo {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+#partiamo h1 {
+    font-size: 2.5rem;
+    padding-top: 70px;
+    line-height: 1.0;
+}
+#partiamo p {
+    padding-top: 20px;
+
+}
+#bottone-partiamo {
+    background-color:#f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding:14px 32px 14px 32px;
+    text-decoration: none;
+}
+#div-bottone {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
