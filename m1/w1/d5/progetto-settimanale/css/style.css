@@ -1,1 +1,22 @@
-/* Your styles here */
+/*Impostazioni generali*/
+body {
+    color:#393d41;
+    font-weight: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+}
+h1, h2, h3, h4, h5, h6 {
+    color:#25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+/*Stile header*/
+header {
+    background: black;
+    text-align: center;
+}
+#logo-header {
+    width: 160px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
