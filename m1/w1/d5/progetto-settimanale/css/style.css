@@ -108,6 +108,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     height: 430px;
+    overflow:auto;
     margin-bottom: 40px;
 }
 #scheda1 {
