@@ -1,7 +1,7 @@
 /*Impostazioni generali*/
 body {
     color:#393d41;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.65;
 }
@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 /*Stile header*/
 header {
     background: black;
+    width: 100%;
 }
 #logo-header {
     width: 260px;
@@ -36,6 +37,7 @@ header {
     background-position: top;
     box-sizing: border-box;
     text-align: center;
+    font-size: 1.6rem;
 }
 #sezione1 h1 {
     font-size: 2.5rem;
@@ -64,41 +66,57 @@ header {
     padding-bottom: 250px;
 }
 /*Stile section 2*/
+#sezione2{
+    height:1000px;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    overflow: auto;
+}
 #sezione2 h3{
     font-size: 1.4rem;
 }
-.padding-top-p{
-    padding-top: 14px;
+.padding-bottom-titoli{
+    padding-bottom: 20px;
 }
-.padding-top-h{
-    padding-top: 30px;
+.padding-bottom-paragrafi{
+    padding-bottom: 25px;
 }
 #notebook{
-    width: 300px;
+    width: 600px;
+    float: left;
     border-radius: 350px;
-    padding-top: 30px;
+    margin-left: 15%;
+    margin-top: 200px;
+}
+#paragrafi2{
+    padding-top: 250px;
+    padding-left: 50%;
+    padding-right: 400px;
 }
 /*Stile section 3*/
 #sezione3{
     background-color: #e22d0e;
     color: white;
-    margin-top: 60px;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    margin-bottom: 70px;
+    text-align: center;
+}
+#contenitore-sezione3{
+    height: 500px;
+    padding-top: 150px;
+    box-sizing: border-box;
 }
 #sezione3 h2{
     color: white;
-    font-size: 2.2rem;
+    font-size: 2.6rem;
 }
 #paragrafo-corsivo{
     font-style: italic;
+    font-size: 2.4rem;
 }
 #mario{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 #CEO{
-    font-size: 1.0rem;
+    font-size: 1.1rem;
 }
 /*Stile section 4*/
 #sezione4{
@@ -136,10 +154,17 @@ header {
     padding-top: 50px;
     padding-bottom: 80px;
 }
+#lista{
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    
+}
 #footer #contattaci{
     color: white;
     font-size: 2.2rem;
     padding-bottom: 20px;
+    text-align: center;
 }
 #footer a{
     color: #c8e7f0;
