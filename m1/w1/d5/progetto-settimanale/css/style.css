@@ -54,6 +54,10 @@ header {
     padding:14px 32px 14px 32px;
     text-decoration: none;
 }
+#bottone-partiamo:hover{
+    background-color: #25a2c3;
+    cursor: pointer;
+}
 #div-bottone {
     padding-top: 60px;
     padding-bottom: 60px;
