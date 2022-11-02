@@ -3,25 +3,47 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let intero1 = 1;
+let intero2 = 2;
+if(intero1 > intero2) {
+  console.log(intero1 + " è il numero più grande.");
+}
+else {
+  console.log(intero2 + " è il numero più grande.");
+}
+console.log("==========================");
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let numeroFornito = 3;
+if(numeroFornito != 5) {
+  console.log("not equal");
+}
+console.log("==========================");
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let numeroFornito2 = 10;
+let risultato = (numeroFornito2 % 5);
+if(risultato == 0) {
+  console.log(numeroFornito2 + " è divisibile per 5");
+}
+console.log("==========================");
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let intero3 = 8;
+let intero4 = 5;
+if(intero3 == 8 || intero4 == 8 || intero3 + intero4 == 8 || intero3 - intero4 == 8 || intero4 - intero3 == 8) {
+  console.log("8 è il numero");
+}
+console.log("==========================");
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
@@ -29,14 +51,35 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let totalShoppingCart = 60;
+let costoSpedizione = 10;
+if(totalShoppingCart >= 50) {
+  console.log("Hai diritto alla spedizione gratuita, dovrai pagare: " + totalShoppingCart +"€");
+}
+else {
+  console.log("Il totale del checkout è di: " + (totalShoppingCart + costoSpedizione) + "€");
+}
+console.log("==========================");
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function calcoloPercentuale(totale, percentuale) {
+  let sconto = (totale / 100) * percentuale;
+  let totaleScontato = totale - sconto;
+  return totaleScontato;
+}
+let sconto = 20;
+let prezzoFinale;
+if(prezzoFinale = calcoloPercentuale(totalShoppingCart, sconto) >= 50) {
+  console.log(" - SCONTO BLACK FRIDAY APPLICATO - Hai diritto alla spedizione gratuita, dovrai pagare: " + (prezzoFinale = calcoloPercentuale(totalShoppingCart, sconto)) +"€");
+}
+else {
+  console.log(" - SCONTO BLACK FRIDAY APPLICATO - Il totale del checkout è di: " + (prezzoFinale = calcoloPercentuale(totalShoppingCart, sconto) + costoSpedizione) +"€");
+}
+console.log("==========================");
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
