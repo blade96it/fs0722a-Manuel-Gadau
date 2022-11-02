@@ -10,6 +10,7 @@ REGOLE
 /* ESERCIZIO 1
  Elenca e descrivi i principali datatype in JavaScript. Prova a spiegarli come se volessi farli comprendere a un bambino.
 */
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 console.log("Il tipo di datatype 'String' è una variabile che può contenere al suo interno del comune testo o anche dei numeri, che vengono però riconosciuti dal codice come testo (da non confondere con il datatype number).");
 console.log("Il tipo di datatype 'Number' è una variabile che può contenere al suo interno dei numeri, che possono essere sia interi che decimali.");
@@ -22,32 +23,47 @@ console.log("================================");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let nome = 'Manuel';
+console.log("Il mio nome è " + nome);
+console.log("================================");
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let somma;
+somma = 12 + 20;
+console.log("La somma è pari a " + somma);
+console.log("================================");
 /* ESERCIZIO 4
  Crea una variable di nome "x" e assegna ad essa il numero 12.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let x = 12;
+console.log("x è uguale a " + x);
+console.log("================================");
 /* ESERCIZIO 5
   Riassegna un nuovo valore alla variabile "name" già esistente: il tuo cognome.
   Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+nome = "Gadau";
+console.log("Il mio cognome è " + nome);
+const nonRiassegnabile = 2;
+console.log("Il valore di const è uguale a " + nonRiassegnabile);
+// nonRiassegnabile = 3; eliminando questo commento dalla riga il codice andrà in blocco non potendo più leggere quello che avviene dopo, in quanto per l'appunto il const non può essere rivalorizzato.
+console.log("================================");
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let sottrazione;
+sottrazione = x - 4;
+console.log("Il valore della sottrazione è uguale a " + sottrazione);
+console.log("================================");
 /* ESERCIZIO 7
  Crea due variabili: "name1" e "name2". Assegna a name1 la stringa "john", e assegna a name2 la stringa "John" (con la J maiuscola!).
  Verifica che name1 sia diversa da name2 (suggerimento: è la stessa cosa di verificare che la loro uguaglianza sia falsa).
@@ -55,3 +71,18 @@ console.log("================================");
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let name1 = "john";
+let name2 = "John";
+if (name1 != name2){
+  console.log("I due nomi sono diversi");
+}
+else {
+  console.log("I due nomi sono uguali");
+}
+if (name1 != name2.toLowerCase()){
+  console.log("I due nomi sono diversi");
+}
+else {
+  console.log("I due nomi sono uguali");
+}
+console.log("La varaibile name2, dopo l'if, è comunque rimasta con la lettera maiuscola: " + name2);
