@@ -1,0 +1,75 @@
+/*Impostazioni generali*/
+@font-face {
+    font-family: 'GODOFWAR';
+    src: url('/progetto-settimanale/assets/fonts/GODOFWAR.TTF') format('truetype');
+}
+body{
+    font-family: 'GODOFWAR';
+    font-size: 2rem;
+    background-image: url(/progetto-settimanale/assets/img/background.jpg);
+    background-size: cover;
+    color: #0054a7;
+}
+/*Stile header*/
+header{
+    text-align: center;
+    font-size: 2.5rem;
+}
+#logo{
+    width:400px;
+    margin-bottom: 20px;
+}
+/*Stili calcolatrice*/
+#calcolatrice {
+    width: 800px;
+    height: 600px;
+    background-color: black;
+    margin:auto;
+    margin-top:30px;
+    box-sizing: border-box;
+    background-image: url(/progetto-settimanale/assets/img/kratos.png);
+    background-repeat: no-repeat;
+    background-size: 360px;
+    background-position: right bottom;
+}
+#tastierino {
+    width: 50%;
+    padding-left: 5%;
+    padding-top: 4.2%;
+}
+.tasti {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #b4b3be;
+    margin-bottom: 30px;
+    margin-right: 8px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor:pointer;
+    color: #0054a7;
+}
+.tasti-grandi {
+    width: 82.2%;
+    height:50px;
+    margin-bottom: 20px;
+    font-family: 'GODOFWAR';
+    font-size: 2.2rem;   
+}
+#uguale {
+    border: 1px solid #b4b3be;
+    width: 83.8%;
+    margin-bottom: 0;
+    text-align: center;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #0054a7;
+}
+#numeri {
+    background-color: #0054a7;
+    color: #b4b3be;
+}
