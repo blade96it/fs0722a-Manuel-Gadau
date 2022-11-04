@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Calcolatrice Scientifica</title>
+    <title>Calcolatrice - God Of War Ragnarok</title>
 </head>
 
 <body>
@@ -35,6 +35,19 @@
             <div class="tasti" data-simbolo="." onclick="inputTastierino(this)">.</div>
             <div class="tasti" data-simbolo="+" onclick="inputTastierino(this)">+</div>
             <div class="tasti-grandi" id ="uguale" onclick="tot()">=</div>
+        </div>
+        <div id="tastierino-scientifico">
+            <p id="scientifica">Scientifica</p>
+            <div class="tasti tasti-scientifici" onclick="radiceQuadrata()">R</div>
+            <div class="tasti tasti-scientifici" onclick="calcoloSeno()">sen</div>
+            <div class="tasti tasti-scientifici" onclick="calcoloCoseno()">cos</div>
+            <div class="tasti tasti-scientifici" onclick="calcoloLogaritmo()">log</div>
+            <div class="tasti tasti-scientifici" onclick="calcoloTangente()">tan</div>
+            <div class="tasti tasti-scientifici" onclick="calcoloExp()">exp</div>
+            <div class="tasti tasti-scientifici tastia4" onclick="calcoloCosenoIperbolico()">cosh</div>
+            <div class="tasti tasti-scientifici tastia4" onclick="calcoloLogaritmo10()">log10</div>
+            <div class="tasti tasti-scientifici tastia4" onclick="calcoloTangenteIperbolica()">tanh</div>
+            <div class="tasti tasti-scientifici tastia4" onclick="calcoloArcoseno()">asen</div>
         </div>
     </div>
     <script src="js/js.js"></script>

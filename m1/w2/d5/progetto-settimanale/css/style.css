@@ -14,6 +14,7 @@ body{
 header{
     text-align: center;
     font-size: 2.5rem;
+    font-weight: 600;
 }
 #logo{
     width:400px;
@@ -23,6 +24,8 @@ header{
 #calcolatrice {
     width: 800px;
     height: 600px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 13px #0054a7;
     background-color: black;
     margin:auto;
     margin-top:30px;
@@ -32,10 +35,23 @@ header{
     background-size: 360px;
     background-position: right bottom;
 }
+/*Imposto lo stile del tastierino classico*/
 #tastierino {
-    width: 50%;
+    width: 47%;
     padding-left: 5%;
     padding-top: 4.2%;
+    display: inline-block;
+}
+/*Imposto lo stile del tastierino scientifico*/
+#tastierino-scientifico {
+    width: 43%;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3.0%;
+}
+#scientifica {
+    text-align: center;
+    padding-bottom: 12px;
 }
 .tasti {
     width: 70px;
@@ -50,8 +66,19 @@ header{
     cursor:pointer;
     color: #0054a7;
 }
+.tasti-scientifici{
+    font-size: 1.2rem;
+    padding-top: 25px;
+    
+}
+.tastia4{
+    padding-left: 8px;
+}
+.tasti:hover{
+    background-color: #b4b3be;
+}
 .tasti-grandi {
-    width: 82.2%;
+    width: 87.5%;
     height:50px;
     margin-bottom: 20px;
     font-family: 'GODOFWAR';
@@ -59,7 +86,7 @@ header{
 }
 #uguale {
     border: 1px solid #b4b3be;
-    width: 83.8%;
+    width: 89.4%;
     margin-bottom: 0;
     text-align: center;
     box-sizing: border-box;
@@ -68,6 +95,9 @@ header{
     font-size: 2.2rem;
     cursor: pointer;
     color: #0054a7;
+}
+#uguale:hover{
+    background-color: #b4b3be;
 }
 #numeri {
     background-color: #0054a7;
