@@ -103,10 +103,10 @@
     const addToTheSecond = function (content) {
       let lista = document.querySelector("#secondList");
       let elementoLista = document.createElement("li");
-      elementoLista.textContent = "Quarto";
+      elementoLista.textContent = content;
       lista.appendChild(elementoLista);
     }
-    addToTheSecond();
+    addToTheSecond("Quarto");
 
     /* ESERCIZIO 6
      Scrivi una funzione per aggiungere un secondo paragrafo al primo div.
@@ -115,10 +115,10 @@
     const addParagraph = function (content) {
       let primoDiv = document.querySelector("p").parentElement;
       let newP = document.createElement("p");
-      newP.textContent = "Creato il secondo paragrafo";
+      newP.textContent = content;
       primoDiv.appendChild(newP);
     }
-    addParagraph();
+    addParagraph("Creato il secondo paragrafo");
 
     /* ESERCIZIO 7
      Scrivi una funzione per far scomparire la prima lista non-ordinata.
