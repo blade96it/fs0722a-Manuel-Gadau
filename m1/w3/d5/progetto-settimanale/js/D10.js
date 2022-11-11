@@ -421,46 +421,121 @@ console.log("===================================");
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
-
+function searchByTitle(string) {
+  let arrayTitles = [];
+  for (let film of movies) {  //faccio ciclare i film dell'array movies
+    film.Title = film.Title.toLowerCase();   //imposto tutte le lettere del title in minuscolo, per facilitare la ricerca
+    if (film.Title.includes(string)) {       //se nel titolo del film corrente è inclusa la stringa indicata allora pusha nel nuovo array il relativo film
+      arrayTitles.push(film);
+    }
+  }
+  return arrayTitles;
+}
+{
+  let string = "Lord";
+  string = string.toLowerCase();    //per facilitare la ricerca imposto anche la stringa in minuscolo
+  console.table(searchByTitle(string));
+}
+console.log("===================================");
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
-
+//creo una funzione simile a quella precedente per poter verificare i titoli che non includono la stringa indicata
+function searchByFalseTitle(string) {
+  let arrayTitles = [];
+  for (let film of movies) {  //faccio ciclare i film dell'array movies
+    film.Title = film.Title.toLowerCase();   //imposto tutte le lettere del title in minuscolo, per facilitare la ricerca
+    if (!film.Title.includes(string)) {       //se nel titolo del film corrente NON è inclusa la stringa indicata allora pusha nel nuovo array il relativo film
+      arrayTitles.push(film);
+    }
+  }
+  return arrayTitles;
+}
+////////////////////////////////////////////////////////////////////////////
+function searchAndDivide(string) {
+  let oggettoMatch = {        //creo il nuovo oggetto
+    match: searchByTitle(string),    //richiamo la funzione precedentemente creata per poter inserire tutti i film che includono la stringa nel titolo
+    unmatch: searchByFalseTitle(string)    //richiamo la funzione precedentemente creata per poter inserire tutti i film che NON includono la stringa nel titolo
+  }
+  return oggettoMatch;
+}
+{
+  let string = "lord";
+  string = string.toLowerCase();    //per facilitare la ricerca imposto anche la stringa in minuscolo
+  console.log(searchAndDivide(string));
+}
+console.log("===================================");
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
-
+function removeIndex(num) {
+  movies.splice(num, 1);  //grazie al metodo splice elimino un film dall'array movies impostando l'indice con num e decidendo di eliminare un solo film
+  return movies;
+}
+{
+  let num = 3;
+  console.table(removeIndex(num));
+}
+console.log("===================================");
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-
+function selezionaContainer() {
+  let container = document.querySelector("#container");
+  return container;
+}
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+function selezionaTd() {
+  let td = document.querySelectorAll("td");
+  return td;
+}
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+function stampaTd() {
+  let tds = selezionaTd();    //richiamo la funzione selezionaTd che mi assegnerà un array di td alla variabile tds
+  for (let td of tds) {
+    console.log(td);
+  }
+}
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-
+function backgroundRed() {
+  let links = document.querySelectorAll("a");     //seleziono tutti i link presenti nella pagina e creo un array che li contiene
+  for (let link of links) {                       //ciclo l'array e assegno ad ogni link ricorrente un background rosso
+    link.style.backgroundColor = "red";
+  }
+}
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-
+function aggiungiElemento() {
+  let lista = document.querySelector("#myList");       //aggancio la lista con relativo id
+  let elemento = document.createElement("li");         //creo l'elemento li
+  lista.appendChild(elemento);                         //inserisco l'elemento nella lista padre
+}
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-
+function svuotaLista() {
+  let lista = document.querySelector("#myList");
+  lista.textContent = "";      //svuoto la lista semplicemente inserendo un testo vuoto
+}
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+function aggiungiClasse() {
+  let trs = document.querySelectorAll("tr");          //aggancio tutti i tr inserendoli in un array
+  for (let tr of trs) {                               //ciclo l'array di tr per far in modo che ad ogni tr verrà assegnata la classe "test"
+    tr.setAttribute("class", "test");
+  }
+}
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
