@@ -9,6 +9,14 @@ REGOLE
 
 // JS Basics
 
+
+
+
+//HO COMMENTATO LA MAGGIOR PARTE DEGLI ESERCIZI TRANNE ALCUNI IL CUI RISULTATO O LE ISTRUZIONI ERANO TROPPO OVVIE. SPERO SI CAPISCA TUTTO, E' TUTTO FUNZIONANTE!
+
+
+
+
 /* ESERCIZIO A
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
@@ -225,6 +233,8 @@ console.log("===================================");
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
+
+/* Questo array viene usato per gli esercizi. Non modificarlo. */
 
 const movies = [
   {
@@ -549,7 +559,17 @@ function aggiungiClasse() {
   ***
 
 */
-
+function halfTree(num) {
+  string = "*";
+  for (let i = 1; i < num + 1; i++) {
+    console.log(string.repeat(i));       //la funzione repeat fa si che la stringa di riferimento venga ripetuta n volte
+  }
+}
+{
+  let num = 3;
+  halfTree(num);
+}
+console.log("===================================");
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -561,11 +581,52 @@ function aggiungiClasse() {
   *****
 
 */
+function tree(num) {
+  for (let i = 0; i < num; i++) {
+    let string = '*';                 //creo la stringa che contiente l'asterisco
+    let spazio = ' ';                 //creo la stringa che contiene lo spazio da inserire nella stringa finale
 
+    for (let i2 = 1; i2 <= i; i2++) {        //faccio ciclare un for interno per poter aumentare gradualmente di 2 la stringa degli asterischi
+      string = string + '**';
+    }
+
+    let spazioPrecedente = spazio.repeat(num - i - 1);     //assegno ad una nuova variabile lo spazio prima creato per poterlo diminuire e aumentare in base alla lunghezza della stringa degli asterischi
+    string = spazioPrecedente + string;        //creo la stringa finale che verrà loggata in console
+    console.log(string);
+  }
+}
+{
+  let num = 7;
+  tree(num);
+}
+console.log("===================================");
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+function isItPrime(num) {
+  let numeroPrimo = true;     //avvio una variabile di tipo boolean
+  // controllo se il numero in questione è maggiore di 1
+  if (num > 1) {
 
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
+    
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {      //verifico se il numero in ingresso sia divisibile per altri numeri oltre che da 1 e da stesso. Nel caso la condizione restituisca 0 allora vorrà dire che non si tratta di un numero primo. 
+        numeroPrimo = false;
+        break;
+      }
+    }
+
+    if (numeroPrimo) {
+      console.log(num + " è un numero primo");
+    } else {
+      console.log(num + " non è un numero primo");
+    }
+  }
+}
+{
+  let num = 5;
+  isItPrime(num);
+}
+
 
 
