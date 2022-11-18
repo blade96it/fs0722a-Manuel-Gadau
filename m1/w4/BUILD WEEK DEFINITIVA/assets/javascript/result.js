@@ -15,8 +15,8 @@ let risposteCorrette=
 "Vero",
 "2017",
 "7417",
-"si, a malincuore",
-"il guanciale"
+"Si, a malincuore",
+"Il guanciale"
 ]
 
 //const arrayProva = ["Central Processing Unit",2,"The logo for Snapchat is a Bell","Falso",5,6,7,"140","Falso","Falso","Java","si, a malincuore","il guanciale"]
@@ -122,7 +122,7 @@ if (percentualeRisposteGiuste >= 60){
 }else{
     congratulazioni.innerHTML ='Sei proprio un granchio!'
     esamePassato.innerHTML="Non hai passato l'esame da Paguro."
-    hasbullah.innerHTML="Non ti abbattere! Con un pò di impegno anche tu riuscirai ad entrare nel esercito dei paguri, la prossima volta studia di più prima di effettuare questo test!!!"
+    hasbullah.innerHTML="Non ti abbattere! Con un pò di impegno anche tu riuscirai ad entrare nell'esercito dei paguri, la prossima volta studia di più prima di effettuare questo test!!!"
 }
 
 

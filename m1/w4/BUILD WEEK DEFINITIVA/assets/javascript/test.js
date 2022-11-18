@@ -124,7 +124,7 @@ const setDomande = [
     {
 
         tipo: "boolean",
-        domandaSet: "Ciccio ci è sottoposto alla addominoplastica?",
+        domandaSet: "Ciccio si è sottoposto alla addominoplastica?",
         risposteSet: ["Vero", "Falso"]
     },
     {
@@ -181,12 +181,12 @@ const setDomande = [
     {
         tipo: "boolean",
         domandaSet: "Cicciogamer89 è fidanzato?",
-        risposteSet: ["si, a malincuore", "no, è uno spirito libero"]
+        risposteSet: ["Si, a malincuore", "No, è uno spirito libero"]
     },
     {
         tipo: "boolean",
         domandaSet: "Sulla carbocrema suprema ci va... ",
-        risposteSet: ["il guanciale", "la pancetta"]
+        risposteSet: ["Il guanciale", "La pancetta"]
     }
 
 
