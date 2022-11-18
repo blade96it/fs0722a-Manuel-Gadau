@@ -16,7 +16,7 @@ let risposteCorrette=
 "2017",
 "7417",
 "Si, a malincuore",
-"Il guanciale"
+"Il guancialee"
 ]
 
 //const arrayProva = ["Central Processing Unit",2,"The logo for Snapchat is a Bell","Falso",5,6,7,"140","Falso","Falso","Java","si, a malincuore","il guanciale"]
