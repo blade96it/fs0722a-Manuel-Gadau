@@ -61,9 +61,9 @@ console.log(percentualeRisposteGiuste)  //funzione per calcolare le risposte cor
 let percentualeRisposteSbagliate = funzionePercentualeSbagliata(numRispCorr,risposteCorrette.length).toFixed(2);
 console.log(percentualeRisposteSbagliate)
 
-numeroRisposteCorrette.innerHTML= `${numRispCorr}/${ciccioGamer89.length} questions`
+numeroRisposteCorrette.innerHTML= `${numRispCorr}/${ciccioGamer89.length} domande`
 let numRispSbagl = 13 - numRispCorr 
-numeroRisposteSbagliate.innerHTML= `${numRispSbagl}/${ciccioGamer89.length} questions`
+numeroRisposteSbagliate.innerHTML= `${numRispSbagl}/${ciccioGamer89.length} domande`
 
 
 //-----------------------------------------------------------------------------
