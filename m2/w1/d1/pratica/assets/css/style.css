@@ -1,6 +1,14 @@
 /* IMPOSTAZIONI GENERALI */
 html {font-size: 62.5%;}
 
+@media print {
+    header, iframe, section, aside, footer {
+        display: none;
+    }
+    th {
+        color: black;
+    }
+}
 
 body { 
     font-family: Poppins, 'Helvetica Neue', sans-serif;
