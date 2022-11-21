@@ -1,5 +1,7 @@
 /* IMPOSTAZIONI GENERALI */
 html {font-size: 62.5%;}
+
+
 body { 
     font-family: Poppins, 'Helvetica Neue', sans-serif;
     font-size: 1.4rem;
@@ -7,6 +9,11 @@ body {
     padding: 15px;
     background-image: url('../img/sfondo.png');
     background-position: center center;
+}
+@media screen and (min-width: 576px) {
+    body {
+        font-size: 1.8rem;
+    }
 }
 * {box-sizing: border-box;}
 hr {display: none;} /* rimuove l'elemento */
@@ -28,6 +35,12 @@ header div img {
 }
 header nav ul {
     margin: 0;
+}
+@media screen and (min-width: 576px) {
+    header nav li {
+        display: inline;
+        padding: 10px;
+    }
 }
 header nav li {
     list-style: none;
@@ -70,6 +83,12 @@ h1 {
     font-weight: bold;
     letter-spacing: -0.03em;
     margin-bottom: 0.7em;
+}
+@media screen and (min-width: 576px) {
+    h1 {
+        font-size: 4.2rem;
+        line-height: 1.2;
+    }
 }
 p, address, ul, ol, dl, blockquote {
     margin-bottom: 1.2em;
@@ -174,6 +193,11 @@ footer {
     padding: 1em;
     text-align: center;
     font-size: 1.2rem;
+}
+@media screen and (min-width: 576px) {
+    footer {
+        font-size: 2rem;
+    }
 }
 footer a {
     color: fuchsia;
