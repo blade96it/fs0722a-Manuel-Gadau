@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="home">
   <div class="container-fluid p-0 sticky-top">
     <!--------------------------------------------------Inizio navbar--------------------------------------------------->
     <nav class="navbar navbar-expand-lg bg-light mb-5">
@@ -25,19 +25,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link active" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Saldi</a>
+              <a class="nav-link" href="#saldi">Saldi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Welcome Summer</a>
+              <a class="nav-link" href="#summer">Welcome Summer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Last Minute</a>
+              <a class="nav-link" href="#last-minute">Last Minute</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Recensioni</a>
+              <a class="nav-link" href="#recensioni">Recensioni</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -60,8 +60,16 @@
       </div>
     </div>
     <!--------------------------------------------------Inizio cards Saldi--------------------------------------------------->
-    <h4>Saldi</h4>
-    <div class="row g-2 contenitore-cards">
+    <div class="row">
+      <div class="col-10">
+        <h4 id="saldi">Saldi</h4>
+      </div>
+      <div class="col-2 text-end">
+        <a id="collassa-link" data-bs-toggle="collapse" href="#collapseSaldi" role="button" aria-expanded="false"
+          aria-controls="collapseSaldi">Nascondi</a>
+      </div>
+    </div>
+    <div id="collapseSaldi" class="row show collapse g-2 contenitore-cards">
       <!--Card Saldi 1-->
       <div class="col-6 col-sm-6 col-md-4 col-lg-3">
         <div class="card border-info bordo-card">
@@ -112,8 +120,16 @@
       </div>
     </div>
     <!--------------------------------------------------Inizio cards Summer--------------------------------------------------->
-    <h4 class="mt-5">Welcome Summer</h4>
-    <div class="row g-2 contenitore-cards">
+    <div class="row mt-5">
+      <div class="col-10">
+        <h4 id="summer">Summer</h4>
+      </div>
+      <div class="col-2 text-end">
+        <a id="collassa-link" data-bs-toggle="collapse" href="#collapseSummer" role="button" aria-expanded="false"
+          aria-controls="collapseSummer">Nascondi</a>
+      </div>
+    </div>
+    <div id="collapseSummer" class="row show collapse g-2 contenitore-cards">
       <!--Card Saldi 1-->
       <div class="col-6 col-sm-6 col-md-6 col-lg-4">
         <div class="card card-titolo shadow">
@@ -188,8 +204,16 @@
       </div>
     </div>
     <!--------------------------------------------------Inizio Offerta del giorno--------------------------------------------------->
-    <h4 class="mt-5 offerta">Offerta del giorno</h4>
-    <div class="row g-2 contenitore-cards offerta">
+    <div class="row mt-5 offerta">
+      <div class="col-10">
+        <h4 id="summer">Offerta del giorno</h4>
+      </div>
+      <div class="col-2 text-end">
+        <a id="collassa-link" data-bs-toggle="collapse" href="#collapseOfferta" role="button" aria-expanded="false"
+          aria-controls="collapseOfferta">Nascondi</a>
+      </div>
+    </div>
+    <div id="collapseOfferta" class="row show collapse g-2 contenitore-cards offerta">
       <div class="col-8">
         <img src="img/Parigi.jpg" class="img-fluid rounded shadow" alt="Foto Parigi">
       </div>
@@ -201,8 +225,16 @@
       </div>
     </div>
     <!--------------------------------------------------Inizio Last Minute--------------------------------------------------->
-    <h4 class="mt-5">Last Minute</h4>
-    <div class="row g-2 contenitore-cards">
+    <div id="last-minute" class="row mt-5">
+      <div class="col-10">
+        <h4 id="summer">Last Minute</h4>
+      </div>
+      <div class="col-2 text-end">
+        <a id="collassa-link" data-bs-toggle="collapse" href="#collapseLast" role="button" aria-expanded="false"
+          aria-controls="collapseLast">Nascondi</a>
+      </div>
+    </div>
+    <div id="collapseLast" class="row show collapse g-2 contenitore-cards">
       <div class="col-6 col-md-4 col-lg-2">
         <img src="img/Budapest.jpg" class="rounded shadow img-fluid" alt="Foto Budapest">
       </div>
@@ -223,7 +255,7 @@
       </div>
     </div>
     <!--------------------------------------------------Inizio Recensioni--------------------------------------------------->
-    <h4 class="mt-5 mb-4 text-center">Dicono di noi</h4>
+    <h4 id="recensioni" class="mt-5 mb-4 text-center">Dicono di noi</h4>
     <div class="row g-2 contenitore-cards">
       <!--Recensione 1-->
       <div class="col-2">
