@@ -60,7 +60,7 @@ class MotherAccount extends SonAccount {
 var figlio = new SonAccount("Peppino", 500);
 var madre = new MotherAccount("Filomena", 1500);
 
-//imposto inizialmente i valori iniziali del saldo.
+//imposto i valori iniziali del saldo.
 saldoAttualeMadre.textContent = "Saldo attuale: " + madre.balanceInit + "€";
 saldoAttualeFiglio.textContent = "Saldo attuale: " + figlio.balanceInit + "€";
 
