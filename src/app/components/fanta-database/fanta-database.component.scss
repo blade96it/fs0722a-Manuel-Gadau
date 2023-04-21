@@ -1,0 +1,63 @@
+//Font personalizzato
+.my-font {
+  font-family: 'FifaFont';
+}
+
+//Padding per titolo
+.padding-titolo {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+//Padding logo per dispositivi mobile
+@media screen and (max-width: 992px) {
+  .padding-logo-mobile {
+    padding-top: 50px;
+  }
+}
+
+//Separatore tra titolo e database
+.separatore {
+  background-color: #1ca22d;
+  padding-top: 50px;
+  border-bottom: 2px solid white;
+}
+
+//Titolo tabella database
+.titolo-tabella-database {
+  background-color: white;
+}
+
+//Linea verticale
+.linea-verticale-database {
+  border-left: 2px solid #1ca22d;
+}
+
+//Separatore tra i giocatori del database
+.separatore-giocatori {
+  padding-bottom: 1px;
+  background-color: #1ca22d;
+}
+
+//Cambio di colore in base all'espansione del pulsante
+.espandi {
+  color: white;
+}
+.espandi:hover {
+  color: #1ca22d;
+}
+
+//testo verde
+.green-text {
+  color: #1ca22d;
+}
+
+//Stile impaginazione
+.page-link {
+  font-family: 'FifaFont';
+  color: black;
+  border: 2px solid black;
+}
+.page-link:enabled {
+  background-color: #1ca22d;
+}

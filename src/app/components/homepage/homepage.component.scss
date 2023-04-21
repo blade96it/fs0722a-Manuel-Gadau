@@ -1,0 +1,229 @@
+.homepage-background {
+  background-image: url('../../../assets/main-background-green.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.homepage-background2 {
+  background-image: url('../../../assets/second-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%
+}
+
+.homepage-background3 {
+  background-image: url('../../../assets/third-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.homepage-background4 {
+  background-image: url('../../../assets/fourth-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
+.nav-font {
+  font-family: 'FifaFont';
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+.padding-alto {
+  padding-top: 250px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  .padding-alto {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .padding-alto {
+    padding-top: 150px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .homepage-background {
+    background-position: center;
+  }
+  .homepage-background2 {
+    background-position: center;
+  }
+}
+
+.btn-info {
+  color: white;
+  border: none;
+  background-color: #1ca22d !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-info:hover {
+  color: white;
+  border: none;
+  background-color: black !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+.padding-mobile {
+  padding-top: 230px;
+}
+
+.titolo-mobile1 {
+  background-color: black;
+  color: white;
+}
+
+.titolo-mobile2 {
+  background-color: white;
+  color: #1ca22d;
+}
+
+.larghezza-massima-mobile {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 991px) {
+  .padding-mobile {
+    padding-top: 150px;
+  }
+
+  .padding-testo-mobile {
+    padding-top: 20px;
+  }
+}
+
+.carousel-indicators {
+  bottom: -80px;
+}
+
+.statitische-max-width {
+  max-width: 600px;
+}
+
+@media screen and (max-width: 438px) {
+  .statitische-max-width {
+    max-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px)  {
+  .padding-mobile {
+    padding-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 992px)  {
+  .statitische-max-width {
+    max-width: 200px;
+  }
+}
+
+.carousel-control-prev{
+  left: -50px;
+}
+
+.colore-freccia {
+  color: black;
+}
+
+.carousel .carousel-indicators button {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-right: 8px;
+}
+
+//Pagina 3 (ASTE)
+.grandezza-font-aste {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.colore-titolo1 {
+  color: white;
+}
+
+.colore-titolo2 {
+  color: #1ca22d;
+}
+
+.colore-titolo3 {
+  color: black;
+}
+
+@media screen and (max-width: 576px) {
+  .padding-mobile-aste {
+    padding-top: 150px;
+  }
+  .homepage-background3 {
+    background-image: url('../../../assets/third-background-mobile.jpg');
+    background-position: center;
+  }
+}
+
+//Pagine 4 (Cards)
+
+.grandezza-font-cards {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.padding-mobile-cards-container {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .grandezza-font-cards {
+    font-size: 40px;
+  }
+
+  .padding-mobile-cards-container {
+    padding-top: 160px;
+  }
+
+  .padding-mobile-cards {
+    padding-top: 40px;
+  }
+}
+
+//Footer
+.link-footer {
+  text-decoration: none;
+  color: white;
+}
+
+.link-footer:hover {
+  color: #1ca22d;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+  .padding-footer {
+    padding-bottom: 30px;
+  }
+}
+
+
+
+
+

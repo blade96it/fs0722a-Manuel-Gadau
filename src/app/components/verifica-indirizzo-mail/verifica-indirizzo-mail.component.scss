@@ -1,0 +1,54 @@
+.login-color {
+  background-color:white;
+  height: 100vh;
+}
+
+.blue-text {
+  color: black;
+}
+
+.fifa-font {
+  font-family: 'FifaFont';
+}
+
+.btn-primary {
+  background-color: black;
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.form-control {
+  background: transparent;
+  border: 2px solid black;
+}
+
+.icons:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
+  color: #1ca22d;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.green-button {
+  background-color: #1ca22d;
+}
+
+.occhio {
+  position: absolute;
+  right: 3%;
+  top: 20%;
+}
+
+.occhio:hover {
+  cursor: pointer;
+}

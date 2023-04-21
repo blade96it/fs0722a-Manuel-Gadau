@@ -1,0 +1,77 @@
+.nav-font {
+  font-family: 'FifaFont';
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.custom-dropdown:hover .custom-dropdown-content {
+  display: block;
+}
+
+.margin-account-dropdown {
+  margin-right: 10%;
+}
+
+.navbar-color {
+  background-color: white;
+}
+
+.navbar-text-color {
+  color: black;
+}
+
+.vertical-line {
+  border-left: thick solid #1ca22d;
+  border-right: thick solid #1ca22d;
+}
+
+.btn-outline-warning {
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.btn-outline-warning:hover {
+  background-color: #1ca22d !important;
+  border: none;
+  color: white !important;
+}
+
+.btn-info {
+  color: white;
+  border: none;
+  background-color: #1ca22d !important;
+}
+
+.header-offcanvas {
+  background-color: rgb(246, 245, 245);
+}
+
+.linea-orizzontale {
+  border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 450px) {
+  .offcanvas {
+    width: 85%;
+  }
+}
+
+.green-text {
+  color: #1ca22d;
+}
+
+

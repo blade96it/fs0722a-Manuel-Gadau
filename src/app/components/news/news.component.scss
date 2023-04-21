@@ -1,0 +1,62 @@
+.my-font {
+  font-family: 'FifaFont';
+}
+
+.news-background {
+  background-image: url('../../../assets/news-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.padding-post {
+  padding-top: 70px;
+}
+
+.padding-post-singolo-laterale {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.altezza-post {
+  max-height: 200px;
+}
+
+.opacita-post {
+  opacity: 0.9;
+}
+
+.green-text {
+  color: #1ca22d;
+}
+
+.cacca {
+  margin-top: 140px;
+}
+
+.btn-primary {
+  background-color: black;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color:#1ca22d;
+  border: none;
+}
+
+//Footer
+.link-footer {
+  text-decoration: none;
+  color: white;
+}
+
+.link-footer:hover {
+  color: #1ca22d;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+  .padding-footer {
+    padding-bottom: 30px;
+  }
+}

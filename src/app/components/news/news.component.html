@@ -1,0 +1,67 @@
+<div class="news-background my-font">
+
+  <!--Carica tutti i post-->
+  <div *ngIf="!isPost; else postSingolo" class="container padding-post pb-5">
+    <div *ngFor="let post of posts; index as i;" class="card mb-5" style="max-width: 700px;">
+      <div class="row g-0">
+        <div class="col-md-5">
+          <img src="../../../assets/Posts/{{post.img}}" class="img-fluid h-100 rounded-start" alt="...">
+        </div>
+        <div class="col-md-7">
+          <div class="card-body">
+            <h4 class="card-title green-text">{{post.titolo}}</h4>
+            <p class="card-text">{{tagliaParolePost(post.body)}}...</p>
+            <p class="card-text"><small class="text-body-secondary">{{post.data}}</small></p>
+            <button class="btn btn-primary" routerLink="/news/{{i+1}}">LEGGI L'ARTICOLO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Carica solo il post selezionato-->
+  <ng-template #postSingolo>
+    <!--Solo per desktop-->
+    <div class="d-none d-lg-block container padding-post pb-5">
+      <div class="bg-white col-8 py-5 opacita-post">
+        <h1 class="ps-5 green-text">{{post.titolo}}</h1>
+        <p class="ps-5 py-2 fst-italic fs-5">{{post.data}}</p>
+        <img src="../../../assets/Posts/{{post.img}}" alt="ImmaginePost" class="img-fluid">
+        <p class="pt-5 fs-5 padding-post-singolo-laterale" [innerHTML]="post.body"></p>
+      </div>
+    </div>
+    <!--Solo per mobile-->
+    <div class="d-lg-none container padding-post pb-5">
+      <div class="bg-white col-12 py-5 opacita-post">
+        <h1 class="ps-3 green-text">{{post.titolo}}</h1>
+        <p class="ps-3 py-2 fst-italic fs-6">{{post.data}}</p>
+        <img src="../../../assets/Posts/{{post.img}}" alt="ImmaginePost" class="img-fluid">
+        <p class="pt-5 fs-6 px-5" [innerHTML]="post.body"></p>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
+
+  <!--Footer-->
+  <div class="nav-font bg-dark my-font">
+    <div class="container-fluid text-white">
+      <div class="row mx-0 py-4 text-center">
+        <div class="col-12 col-lg-4 padding-footer">
+          <a href="https://www.cobblestoneinteractive.com/" target="_blank" class="link-footer">Termini di servizio </a><span>/// </span>
+          <a href="https://www.cobblestoneinteractive.com/" target="_blank" class="link-footer">Privacy Policy </a><span>/// </span>
+          <a href="https://www.cobblestoneinteractive.com/" target="_blank" class="link-footer">Cookie Policy </a><span>/// </span>
+          <a href="https://www.cobblestoneinteractive.com/" target="_blank" class="link-footer">Lavora con noi</a>
+        </div>
+        <div class="col-12 col-lg-4 padding-footer">
+          <span>© 2023 Cobblestone Interactive. Tutti i diritti riservati.</span>
+        </div>
+        <div class="col-12 col-lg-4">
+          <span class="d-none d-lg-inline">Seguici sui nostri social: </span>
+          <a href="https://www.linkedin.com/company/cobblestone-interactive/" target="_blank"><fa-icon [icon]="iconaFacebook" class="fs-5 ps-2 link-footer"></fa-icon></a>
+          <a href="https://www.linkedin.com/company/cobblestone-interactive/" target="_blank"><fa-icon [icon]="iconaInstagram" class="fs-5 ps-2 link-footer"></fa-icon></a>
+          <a href="https://www.linkedin.com/company/cobblestone-interactive/" target="_blank"><fa-icon [icon]="iconaLinkedin" class="fs-5 ps-2 link-footer"></fa-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>

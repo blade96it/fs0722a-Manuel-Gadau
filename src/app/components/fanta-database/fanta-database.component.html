@@ -1,0 +1,215 @@
+<div class="bg-dark">
+  <div class="container my-font text-white padding-titolo">
+    <div class="row mx-0">
+      <div class="col-12 col-lg-6">
+        <h1 class="pb-3">VALUTAZIONE GIOCATORI SERIE A 2023/2024</h1>
+        <h5>Con il nuovo sistema di overall valuta quali giocatori potrebbero fare al caso tuo durante l'asta. Sfrutta opzioni di filtraggio in base a diverse statistiche per capire chi saranno i tuoi giocatori.</h5>
+      </div>
+      <div class="col-12 col-lg-6 padding-logo-mobile">
+        <img src="../../../assets/fantastudio-logo-white.png" alt="LogoFantaStudio" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="separatore"></div>
+
+<!--Database giocatori-->
+<div class="bg-dark">
+  <div class="container pt-5 my-font d-none d-lg-block">
+    <div class="titolo-tabella-database rounded row mx-0">
+      <div class="col-12 fs-5 py-3 row mx-0">
+        <span class="col-4">GIOCATORE</span>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>NAZ</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>SQU</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>RUO</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>TOT</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>RAR</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>SKILL</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+          <span>F.M</span>
+        </div>
+        <div class="col-1 linea-verticale-database text-center">
+        </div>
+      </div>
+    </div>
+
+    <div *ngFor="let giocatore of giocatori; let i = index"
+    [ngClass]="{'d-none': i < paginaCorrente * giocatoriPerPagina || i >= (paginaCorrente + 1) * giocatoriPerPagina}"
+    class="row mx-0 text-white">
+      <div class="col-12 fs-5 py-4 row mx-0">
+        <fa-icon [icon]="iconaGiocatore" class="col-1 align-self-end"></fa-icon>
+        <span class="col-3 align-self-end">{{giocatore.nome}} {{giocatore.cognome}}</span>
+        <div class="col-1 text-center">
+          <span><img src="../../../assets/Nazioni/{{giocatore.nazionalita}}.png" width="30px"></span>
+        </div>
+        <div class="col-1 text-center">
+          <span><img src="../../../assets/Bandiere/{{giocatore.squadra}}.png" alt="" width="30px"></span>
+        </div>
+        <div class="col-1 text-center align-self-end">
+          <span>{{tagliaParola(giocatore.ruolo)}}</span>
+        </div>
+        <div class="col-1 text-center align-self-end">
+          <span>{{giocatore.overall}}</span>
+        </div>
+        <div class="col-1 text-center align-self-end">
+          <span><img src="../../../assets/Rarita/{{giocatore.rarita}}.png" width="30px"></span>
+        </div>
+        <div class="col-1 text-center align-self-end">
+          <span>{{tagliaParola(giocatore.skill)}}</span>
+        </div>
+        <div class="col-1 text-center align-self-end">
+          <span>{{giocatore.fantaMedia}}</span>
+        </div>
+        <div class="col-1 text-center">
+          <a class="espandi" data-bs-toggle="collapse" href="#{{giocatore.id}}" role="button" [attr.aria-expanded]="giocatore.espanso ? 'true' : 'false'" aria-controls="collapseExample" (click)="espandiGiocatore(giocatore)"><fa-icon *ngIf="!giocatore.espanso" [icon]="iconaPlus" class="col-1"></fa-icon>
+                                          <fa-icon *ngIf="giocatore.espanso" [icon]="iconaMinus" class="col-1"></fa-icon></a>
+        </div>
+      </div>
+      <div class="col-12 collapse mb-3 row mx-0" id={{giocatore.id}}>
+        <div class="col-3">
+          <img src="../../../assets/Cards/{{giocatore.card}}.jpg" alt="" class="img-fluid">
+        </div>
+        <div class="col-3 text-white">
+          <h4 class="mb-3">Dettagli personali:</h4>
+          <p>Data di nascita: {{giocatore.dataNascita}}</p>
+          <p>Altezza: {{giocatore.altezza}} cm</p>
+          <p>Nazionalità: {{giocatore.nazionalita}} <img src="../../../assets//Nazioni/{{giocatore.nazionalita}}.png" width="20px" class="mb-1 ms-1"></p>
+          <p>Squadra: {{giocatore.squadra}} <img src="../../../assets/Bandiere/{{giocatore.squadra}}.png" width="20px" class="mb-1 ms-1"></p>
+          <p>Piede: {{giocatore.piede}}</p>
+          <p>Ruolo Mantra: {{giocatore.ruoloMantra}}</p>
+          <p>Rarità: {{giocatore.rarita}} <img src="../../../assets/Rarita/{{giocatore.rarita}}.png" width="20px" class="mb-1 ms-1"></p>
+        </div>
+        <div class="col-3 text-white">
+          <h4 class="mb-3">Dettagli ultima stagione:</h4>
+          <p>Partite giocate: <span class="green-text fs-5">{{giocatore.partiteGiocate}}</span> <img src="../../../assets/Campo-di-calcio.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Reti segnate: <span class="green-text fs-5">{{giocatore.reti}}</span> <img src="../../../assets/soccer_ball.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Assist: <span class="green-text fs-5">{{giocatore.assist}}</span> <img src="../../../assets/scarpette.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Ammonizioni: <span class="green-text fs-5">{{giocatore.ammonizioni}}</span> <img src="../../../assets/yellow-card.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Espulsioni: <span class="green-text fs-5">{{giocatore.espulsioni}}</span> <img src="../../../assets/red-card.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Rigori segnati: <span class="green-text fs-5">{{giocatore.rigoriSegnati}}/{{giocatore.rigoriTirati}}</span> <img src="../../../assets/soccer_ball.png" width="20px" class="mb-1 ms-2"></p>
+        </div>
+        <div class="col-3 text-white">
+          <h4 class="mb-3">Dettagli FantaCalcio 22/23:</h4>
+          <p>MediaVoto: <span class="green-text fs-5">{{giocatore.mediaVoto}}</span></p>
+          <p>FantaMedia: <span class="green-text fs-5">{{giocatore.fantaMedia}}</span></p>
+          <p>Quotazione attuale: <span class="green-text fs-5">{{giocatore.quotazione}}</span></p>
+        </div>
+      </div>
+      <div class="col-12 separatore-giocatori"></div>
+    </div>
+  </div>
+  <div class="container pt-5 my-font d-lg-none">
+    <div class="row mx-0 titolo-tabella-database rounded">
+      <span class="ps-5 fs-5 py-2 col-12">GIOCATORE</span>
+    </div>
+    <div *ngFor="let giocatore of giocatori; let i = index"
+    [ngClass]="{'d-none': i < paginaCorrente * giocatoriPerPagina || i >= (paginaCorrente + 1) * giocatoriPerPagina}"
+    class="row mx-0 text-white">
+      <div class="col-12 py-4 row mx-0">
+        <fa-icon [icon]="iconaGiocatore" class="col-1 align-self-center text-center"></fa-icon>
+        <span class="col-4 align-self-center">{{giocatore.nome}} {{giocatore.cognome}}</span>
+        <div class="col-2 text-center align-self-center">
+          <span><img src="../../../assets/Nazioni/{{giocatore.nazionalita}}.png" width="30px"></span>
+        </div>
+        <div class="col-2 text-center align-self-center">
+          <span>{{giocatore.overall}}</span>
+        </div>
+        <div class="col-2 text-center align-self-center">
+          <span>{{tagliaParola(giocatore.ruolo)}}</span>
+        </div>
+        <div class="col-1 text-center align-self-center">
+          <a class="espandi" data-bs-toggle="collapse" href="#{{giocatore.id}}" role="button" [attr.aria-expanded]="giocatore.espanso ? 'true' : 'false'" aria-controls="collapseExample" (click)="espandiGiocatore(giocatore)"><fa-icon *ngIf="!giocatore.espanso" [icon]="iconaPlus" class="col-1"></fa-icon>
+                                          <fa-icon *ngIf="giocatore.espanso" [icon]="iconaMinus" class="col-1"></fa-icon></a>
+        </div>
+      </div>
+      <div class="col-12 collapse mb-3 row mx-0" id={{giocatore.id}}>
+        <div class="col-12">
+          <img src="../../../assets/Cards/{{giocatore.card}}.jpg" class="img-fluid">
+        </div>
+        <div class="col-12 text-white mt-3">
+          <h4 class="mb-3 green-text">Dettagli personali:</h4>
+          <p>Data di nascita: {{giocatore.dataNascita}}</p>
+          <p>Altezza: {{giocatore.altezza}} cm</p>
+          <p>Nazionalità: {{giocatore.nazionalita}} <img src="../../../assets/Nazioni/{{giocatore.nazionalita}}.png" width="20px" class="mb-1 ms-1"></p>
+          <p>Squadra: {{giocatore.squadra}} <img src="../../../assets/Bandiere/{{giocatore.squadra}}.png" width="20px" class="mb-1 ms-1"></p>
+          <p>Piede: {{giocatore.piede}}</p>
+          <p>Ruolo Mantra: {{giocatore.ruoloMantra}}</p>
+          <p>Rarità: {{giocatore.rarita}} <img src="../../../assets/Rarita/{{giocatore.rarita}}.png" width="20px" class="mb-1 ms-1"></p>
+        </div>
+        <div class="col-12 text-white mt-3">
+          <h4 class="mb-3 green-text">Dettagli ultima stagione:</h4>
+          <p>Partite giocate: <span class="green-text fs-5">{{giocatore.partiteGiocate}}</span> <img src="../../../assets/Campo-di-calcio.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Reti segnate: <span class="green-text fs-5">{{giocatore.reti}}</span> <img src="../../../assets/soccer_ball.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Assist: <span class="green-text fs-5">{{giocatore.assist}}</span> <img src="../../../assets/scarpette.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Ammonizioni: <span class="green-text fs-5">{{giocatore.ammonizioni}}</span> <img src="../../../assets/yellow-card.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Espulsioni: <span class="green-text fs-5">{{giocatore.espulsioni}}</span> <img src="../../../assets/red-card.png" width="20px" class="mb-1 ms-2"></p>
+          <p>Rigori segnati: <span class="green-text fs-5">{{giocatore.rigoriTirati}}/{{giocatore.rigoriSegnati}}</span> <img src="../../../assets/soccer_ball.png" width="20px" class="mb-1 ms-2"></p>
+        </div>
+        <div class="col-12 text-white mt-3">
+          <h4 class="mb-3 green-text">Dettagli FantaCalcio 22/23:</h4>
+          <p>MediaVoto: <span class="green-text fs-5">{{giocatore.mediaVoto}}</span></p>
+          <p>FantaMedia: <span class="green-text fs-5">{{giocatore.fantaMedia}}</span></p>
+          <p>Quotazione attuale: <span class="green-text fs-5">{{giocatore.quotazione}}</span></p>
+        </div>
+      </div>
+      <div class="col-12 separatore-giocatori"></div>
+    </div>
+  </div>
+
+<!--Impaginazione-->
+
+<div class="row mx-0 py-5">
+  <div class="col-12">
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" [class.disabled]="paginaCorrente === 0">
+          <a class="page-link" [routerLink]="['/fanta-database']" (click)="goToFirstPage()" aria-label="First">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">First</span>
+          </a>
+        </li>
+
+        <li class="page-item" [ngClass]="{'disabled': paginaCorrente === 0}">
+          <a class="page-link" [routerLink]="['/fanta-database']" (click)="paginaCorrente = paginaCorrente - 1">Prev</a>
+        </li>
+        <li class="page-item" [ngClass]="{'active': i === paginaCorrente}" *ngFor="let i of pages">
+          <a class="page-link" [routerLink]="['/fanta-database']" (click)="paginaCorrente = i">{{ i + 1 }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="paginaCorrente >= pageCount - 1">
+          <a class="page-link" [routerLink]="['/fanta-database']" (click)="setPage(paginaCorrente + 2)">Next</a>
+        </li>
+        <li class="page-item" [class.disabled]="paginaCorrente >= pageCount - 1">
+          <a class="page-link" [routerLink]="['/fanta-database']" (click)="goToLastPage()" aria-label="Last">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Last</span>
+          </a>
+        </li>
+
+        <li class="page-item" *ngIf="pages.length > 3 && paginaCorrente >= 2">
+          <a class="page-link" [routerLink]="['/fanta-database']" (click)="paginaCorrente = 0">1</a>
+        </li>
+
+        <li class="page-item disabled" *ngIf="pages.length > 3 && paginaCorrente >= 3"><span class="page-link">...</span></li>
+        <li class="page-item" *ngIf="pages.length > 3 && paginaCorrente < pageCount - 3"><a class="page-link" [routerLink]="['/fanta-database']" (click)="paginaCorrente = pageCount - 1">{{ pageCount }}</a></li>
+        <li class="page-item disabled" *ngIf="pages.length > 3 && paginaCorrente < pageCount - 4"><span class="page-link">...</span></li>
+
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

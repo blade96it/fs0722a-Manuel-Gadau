@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<div class="login-color fifa-font">
+  <div class="container-fluid mb-5">
+    <div class="row mx-0 justify-content-center">
+      <div class="col-12 col-sm-8 col-md-7 col-lg-5 col-xl-4 col-xxl-3">
+        <img src="../../../assets/fantastudio-logo-black.png" alt="LogoFantaStudio" class="img-fluid px-5 my-5">
+          <form #signin="ngForm" (ngSubmit)="onSubmit(signin)">
+            <div class="mb-3">
+              <input type="text" class="form-control shadow-none" name="username" ngModel required placeholder="Username">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control shadow-none" name="email" ngModel required email="email" placeholder="Indirizzo E-mail">
+            </div>
+            <div class="mb-4 input-group">
+              <input type="password" [type]="showPassword ? 'text' : 'password'" class="form-control shadow-none rounded" name="password" ngModel required placeholder="Password">
+              <fa-icon *ngIf="!showPassword" [icon]="iconaOcchioChiuso" class="ms-2 occhio" (click)="toggleShowPassword()"></fa-icon>
+              <fa-icon *ngIf="showPassword" [icon]="iconaOcchioAperto" class="ms-2 occhio" (click)="toggleShowPassword()"></fa-icon>
+            </div>
+              <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary fs-5 green-button" [disabled]="!signin.valid">Iscriviti</button>
+              </div>
+          </form>
+        <div class="my-4 text-center">
+          <p class="fs-5 text-danger">{{messaggio}}</p>
+          <img src="../../../assets/soccer_ball.png" alt="Pallone" width="30" height="30">
+          <span class="mx-3 fw-bold blue-text">O ISCRIVITI CON</span>
+          <img src="../../../assets/soccer_ball.png" alt="Pallone" width="30" height="30">
+        </div>
+        <div class="text-center">
+          <img src="../../../assets/Google.jpg" alt="GoogleIcon" width="50" height="50" class="rounded me-4 icons" (click)="logInGoogle()">
+          <img src="../../../assets/Facebook.png" alt="FacebookIcon" width="50" height="50" class="rounded me-4 icons" (click)="logInFacebook()">
+          <img src="../../../assets/Apple.png" alt="AppleIcon" width="50" height="50" class="rounded icons">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+

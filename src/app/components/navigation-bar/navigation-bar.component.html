@@ -1,0 +1,97 @@
+<!--Main NavBar con logo-->
+<nav class="navbar navbar-expand-lg navbar-color navbar-text-color sticky-top nav-font fs-4">
+  <button class="navbar-toggler ms-3 fs-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand ms-3 mx-auto">
+    <img src="../../../assets/fantastudio-logo-black.png" alt="FantaStudioLogo" width="180" height="45">
+  </a>
+
+<!--Account offcanvas-->
+  <div>
+    <button class="btn d-lg-none fs-4 mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><fa-icon [icon]="iconaAccount" class="me-3"></fa-icon></button>
+    <div class="offcanvas offcanvas-end navbar-color navbar-text-color" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header header-offcanvas">
+    <h3 class="offcanvas-title" id="offcanvasRightLabel">
+      <fa-icon [icon]="iconaAccount" class="mx-2"></fa-icon>
+      <span *ngIf="!authService.isLoggedIn">Il tuo Account</span>
+      <span *ngIf="authService.isLoggedIn">Ciao, {{user.displayName}}</span>
+    </h3>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body navbar-nav">
+      <div class="container">
+        <div class="row mx-0 mt-4">
+          <button *ngIf="!authService.isLoggedIn" data-bs-dismiss="offcanvas" [routerLink]="['/sign-in']" type="button" class="btn btn-info d-lg-none mb-4 fs-4">Connettiti</button>
+          <p *ngIf="!authService.isLoggedIn" class="d-lg-none fs-5">Non hai un account? <a [routerLink]="['/sign-up']" class="green-text" data-bs-dismiss="offcanvas">Iscriviti</a></p>
+          <a *ngIf="authService.isLoggedIn" data-bs-dismiss="offcanvas" class="d-lg-none fs-4 linea-orizzontale pb-3 text-end nav-link" routerLinkActive="active">PAGINA PROFILO</a>
+          <a *ngIf="authService.isLoggedIn" data-bs-dismiss="offcanvas" class="d-lg-none fs-4 linea-orizzontale pb-3 text-end nav-link" routerLinkActive="active">LE TUE ASTE</a>
+          <a *ngIf="authService.isLoggedIn" data-bs-dismiss="offcanvas" class="d-lg-none fs-4 linea-orizzontale pb-3 text-end nav-link" routerLinkActive="active">LA TUA SQUADRA</a>
+          <p *ngIf="authService.isLoggedIn" class="fs-5 mt-4 d-lg-none">Non sei un utente Premium? <a data-bs-dismiss="offcanvas" class="pb-3 green-text">Abbonati!</a></p>
+          <img src="../../../assets/fantastudio-logo-black.png" alt="FantaStudioLogo" class="mt-4 img-fluid d-lg-none">
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer d-lg-none">
+      <div class="row mx-0">
+        <div class="col-8 justify-content-center d-flex align-items-center">
+          <button *ngIf="authService.isLoggedIn" data-bs-dismiss="offcanvas" type="button" class="btn btn-info d-lg-none fs-4 px-5" (click)="logOutUser()">Logout</button>
+        </div>
+        <div class="col-4"><a href="https://www.cobblestoneinteractive.com/" target="_blank"><img src="../../../assets/LogoCobblestone.png" alt="Immagine pallone" class="d-lg-none img-fluid"></a></div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!--Contenuto navbar-->
+  <div class="offcanvas offcanvas-start navbar-color navbar-text-color" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+    <div class="navbar-nav align-items-center justify-content-between">
+    <div class="ms-lg-5">
+      <a class="nav-link d-none d-lg-inline me-3" [routerLink]="['/']" routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">HOME</a>
+      <a class="nav-link d-none d-lg-inline me-3" [routerLink]="['/fanta-database']" routerLinkActive="active">FANTADATABASE</a>
+      <a class="nav-link d-none d-lg-inline" [routerLink]="['/news']" routerLinkActive="active">NEWS</a>
+    </div>
+
+    <!--Dropdown Account menu-->
+  <div class="margin-account-dropdown custom-dropdown d-none d-lg-inline">
+      <a class="btn d-none d-lg-inline fs-5">
+        <fa-icon [icon]="iconaAccount" class="me-2"></fa-icon>
+        <span *ngIf="!authService.isLoggedIn">Account</span>
+        <span *ngIf="authService.isLoggedIn">Ciao, {{user.displayName}}</span></a>
+      <fa-icon [icon]="iconaFreccia"></fa-icon>
+        <div class="custom-dropdown-content">
+          <div class="container">
+            <div class="row mx-0 justify-content-center">
+              <button *ngIf="!authService.isLoggedIn" type="button" class="btn btn-outline-warning mt-3 mb-3 col-10" [routerLink]="['/sign-in']">Connettiti</button>
+              <button *ngIf="!authService.isLoggedIn" type="button" class="btn btn-outline-warning mb-3 col-10" [routerLink]="['/sign-up']">Iscriviti</button>
+              <button *ngIf="authService.isLoggedIn" type="button" class="btn btn-outline-warning mt-3 col-10">La tua Dashboard</button>
+              <button *ngIf="authService.isLoggedIn" type="button" class="btn btn-outline-warning mt-3 mb-3 col-10" (click)="logOutUser()">Disconnettiti</button>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <!--Contenuto offcanvas-->
+    <div class="offcanvas-header header-offcanvas">
+    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../../../assets/fantastudio-logo-black.png" alt="FantaStudioLogo" width="240" height="60"></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body navbar-nav">
+      <div class="container fs-3">
+        <a class="nav-link d-lg-none py-3 mb-0 linea-orizzontale" data-bs-dismiss="offcanvas" [routerLink]="['/']" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">HOME</a>
+        <a class="nav-link d-lg-none py-3 mb-0 linea-orizzontale" [routerLink]="['/fanta-database']" routerLinkActive="active" data-bs-dismiss="offcanvas">FANTADATABASE</a>
+        <a class="nav-link d-lg-none py-3 mb-0 linea-orizzontale" [routerLink]="['/news']" routerLinkActive="active" data-bs-dismiss="offcanvas">NEWS</a>
+      </div>
+    </div>
+    <div class="offcanvas-footer d-lg-none d-flex justify-content-end">
+      <a href="https://www.cobblestoneinteractive.com/" target="_blank"><img src="../../../assets/LogoCobblestone.png" alt="Immagine pallone" width="120" height="120" class="d-lg-none"></a>
+    </div>
+  </div>
+</nav>
+
+<!--Chiamata router-->
+<router-outlet></router-outlet>
+
